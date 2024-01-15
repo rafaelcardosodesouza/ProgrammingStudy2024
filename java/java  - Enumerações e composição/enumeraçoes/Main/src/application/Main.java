@@ -10,5 +10,9 @@ public class Main {
 
         Order order = new Order(1010, new Date(), OrderStatus.PROCESSING);
         System.out.println(order);
+        OrderStatus typeOne = OrderStatus.SHIPPED;
+        System.out.println(typeOne);
+
+        OrderStatus typeTwo = OrderStatus.DELIVERED;
     }
 }
