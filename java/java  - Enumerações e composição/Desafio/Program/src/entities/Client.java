@@ -39,4 +39,10 @@ public class Client {
     public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
     }
+
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(name).append(" (").append(birthDate).append(") - ").append(email);
+        return sb.toString();
+    }
 }
