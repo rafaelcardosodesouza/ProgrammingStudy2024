@@ -36,10 +36,18 @@ public class Account {
     }
 
     public void withdraw(Double amount) {
-        balance -= amount;
+        balance -= amount + 5.0;
     }
 
     public void deposit(Double amount) {
         balance += amount;
+    }
+
+    @Override
+    public String toString() {
+        return "Account\n" +
+                "\nholder: '" + holder + '\'' +
+                "\nnumber: " + number +
+                "\nbalance: " + balance;
     }
 }
