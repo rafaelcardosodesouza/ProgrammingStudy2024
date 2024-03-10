@@ -6,7 +6,7 @@ import entities.SavingAccount;
 
 public class Main {
     public static void main(String[] args) {
-
+        /*
         Account acc = new Account(1001, "Rafael", 0.0);
         BusinessAccount bacc = new BusinessAccount(1002, "Joelma", 1000.0, 100.0);
 
@@ -49,5 +49,20 @@ public class Main {
         acc8.withdraw(15.00);
         System.out.println(acc8.getHolder());
         System.out.println(acc8.getBalance());
+
+
+         */
+        Account x = new Account(1010, "Alex", 1000.00);
+        Account y = new SavingAccount(1011, "Maria", 1000.00, 0.0);
+
+        x.withdraw(50.00);
+        y.withdraw(50.00);
+
+        System.out.print(x.getHolder() + " ");
+        System.out.println(x.getBalance());
+
+        System.out.print(y.getHolder() + " ");
+        System.out.println(y.getBalance());
+
     }
 }
