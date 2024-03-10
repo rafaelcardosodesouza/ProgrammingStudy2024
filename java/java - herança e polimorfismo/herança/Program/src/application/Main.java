@@ -6,7 +6,7 @@ import entities.SavingAccount;
 
 public class Main {
     public static void main(String[] args) {
-        /*
+
         Account acc = new Account(1001, "Rafael", 0.0);
         BusinessAccount bacc = new BusinessAccount(1002, "Joelma", 1000.0, 100.0);
 
@@ -18,18 +18,18 @@ public class Main {
 
         //DownCasting
 
-        BusinessAccount acc4 = (BusinessAccount)acc2;
+        BusinessAccount acc4 = (BusinessAccount) acc2;
         acc4.loan(100.00);
 
 
         System.out.println(acc4);
-        if(acc3 instanceof BusinessAccount){
-            BusinessAccount acc5 = (BusinessAccount)acc3;
+        if (acc3 instanceof BusinessAccount) {
+            BusinessAccount acc5 = (BusinessAccount) acc3;
             acc5.loan((100.00));
             System.out.println("Loan!");
         }
-        if(acc3 instanceof SavingAccount){
-            SavingAccount acc5 = (SavingAccount)acc3;
+        if (acc3 instanceof SavingAccount) {
+            SavingAccount acc5 = (SavingAccount) acc3;
             acc5.updateBalance();
             System.out.println("Update");
 
@@ -51,7 +51,6 @@ public class Main {
         System.out.println(acc8.getBalance());
 
 
-         */
         Account x = new Account(1010, "Alex", 1000.00);
         Account y = new SavingAccount(1011, "Maria", 1000.00, 0.0);
 
