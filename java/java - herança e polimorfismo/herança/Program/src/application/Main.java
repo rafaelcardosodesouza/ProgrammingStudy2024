@@ -4,9 +4,12 @@ import entities.Account;
 import entities.BusinessAccount;
 import entities.SavingAccount;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-
+/*
         Account acc = new Account(1001, "Rafael", 0.0);
         BusinessAccount bacc = new BusinessAccount(1002, "Joelma", 1000.0, 100.0);
 
@@ -62,6 +65,26 @@ public class Main {
 
         System.out.print(y.getHolder() + " ");
         System.out.println(y.getBalance());
+*/
 
+        List<Account> list = new ArrayList<>();
+        list.add(new SavingAccount(1000, "alex", 1000.00, 0.01));
+        list.add(new SavingAccount(1000, "Bob", 100.00, 0.01));
+        list.add(new BusinessAccount(1000, "Maria", 10.00, 0.01));
+
+        Double sum = 0.0;
+        for(Account acc:list){
+            sum += acc.getBalance();
+        }
+        System.out.printf("Total balance %.2f%n",sum);
+        for(Account x :list){
+            x.deposit(10.00);
+        }
+        sum = 0.0;
+        for(Account acc:list){
+            sum += acc.getBalance();
+        }
+        System.out.printf("Total balance %.2f%n",sum);
     }
+
 }
