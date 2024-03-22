@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+       /**
         File file = new File("C:\\Users\\rafae\\OneDrive\\Área de Trabalho\\estudo de programação 2024\\ProgrammingStudy2024\\java\\Tratamento de exceções\\2\\in.txt");
         Scanner sc = null;
         try {
@@ -20,5 +21,8 @@ public class Main {
             }
         }
         System.out.println("Finally block executed!!!");
-    }
+
+        **/
+
+        }
 }
