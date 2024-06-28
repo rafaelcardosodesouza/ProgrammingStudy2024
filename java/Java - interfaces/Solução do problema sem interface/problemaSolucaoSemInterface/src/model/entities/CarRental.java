@@ -8,6 +8,7 @@ public class CarRental {
     private LocalDateTime finish;
 
     private Vehicle vehicle;
+    private Invoice invoice;
 
      public CarRental(){
 
@@ -43,5 +44,11 @@ public class CarRental {
         this.vehicle = vehicle;
     }
 
+    public Invoice getInvoice() {
+        return invoice;
+    }
 
+    public void setInvoice(Invoice invoice) {
+        this.invoice = invoice;
+    }
 }
