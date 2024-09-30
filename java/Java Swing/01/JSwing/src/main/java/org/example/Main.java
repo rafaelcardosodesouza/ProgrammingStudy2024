@@ -1,8 +1,9 @@
 package org.example;
 
+import org.example.testeDeComponentes.ButtonJlabel;
+
 import javax.swing.*;
 import java.awt.*;
-
 
 public class Main {
 
@@ -10,23 +11,41 @@ public class Main {
         // Criar a janela principal
         JFrame frame = new JFrame("Teste");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(400, 400);
+        frame.setSize(300, 250);
 
-        // Criar o painel para os botões
-        JPanel panel = new JPanel();
+        // Criar o painel para os componentes com GridLayout
+        JPanel panel = new JPanel(new GridLayout(3, 2));
 
-        // Criar o botão 1 e adicionar ao painel
-        JButton button1 = new JButton("Clique em mim - Botão 1");
-        button1.addActionListener(new Button1()); // Usando a classe Button1
-        panel.add(button1);
+        // Criação dos JLabels e JTextField
+        JLabel label = new JLabel("Qual o usuario: ");
+        JTextField campoDeUsuario = new JTextField(10);
+        JLabel label1 = new JLabel("Senha: ");
+        JPasswordField campoDeSenha = new JPasswordField(10);
 
-        // Criar o botão 2 e adicionar ao painel
-        JButton button2 = new JButton("Clique em mim - Botão 2");
-        button2.addActionListener(new Button2()); // Usando a classe Button2
-        panel.add(button2);
 
-        // Adicionar o painel à janela
-        frame.getContentPane().add(BorderLayout.EAST, panel);
+        // Resultado JLabel
+        JLabel resultado = new JLabel("");
+
+        // Definir o tamanho preferido dos campos de texto (altura mais compacta)
+        campoDeUsuario.setPreferredSize(new Dimension(150, 20));
+        campoDeSenha.setPreferredSize(new Dimension(150, 20));
+
+        // Adicionando os componentes ao painel
+        panel.add(label);
+        panel.add(campoDeUsuario);
+        panel.add(label1);
+        panel.add(campoDeSenha);
+        panel.add(new JLabel("")); // Espaço vazio
+        frame.getContentPane().add(BorderLayout.CENTER, resultado);
+
+        // Adiciona o painel ao frame
+        frame.getContentPane().add(BorderLayout.NORTH, panel);
+
+        // Botão Enviar
+        JButton buttonJLabel = new JButton("Enviar");
+        buttonJLabel.addActionListener(new ButtonJlabel(campoDeUsuario, campoDeSenha, resultado));
+        frame.getContentPane().add(BorderLayout.SOUTH, buttonJLabel);
+
         frame.setVisible(true);
     }
 }
