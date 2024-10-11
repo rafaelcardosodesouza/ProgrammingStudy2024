@@ -1,11 +1,18 @@
 package com.estudoSpring.curso.entities;
 
+import jakarta.persistence.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+
 import java.io.Serializable;
 import java.util.Objects;
 
+@Entity
+@Table(name = "tb_user") // para nao dar conflito com o nome da classe
 public class User implements Serializable {
     private static final long serialVersionUID = 1L;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String email;
